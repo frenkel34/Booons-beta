@@ -9,12 +9,12 @@ input{
 width:100%;
 height: 35px;
 font-size:1.2em;
-font-family: calibri;	
+font-family: 'Comfortaa', cursive, calibri;	
 }
 #app-status-ul, #app-status-div, h2, a, #users-ul, .tdEvent{
 color:#a1a1a1;
 font-size:0.8em;
-font-family: calibri;	
+font-family: 'Comfortaa', cursive, calibri;	
 }
 .formItem{
 border-bottom: 1px solid #d6c6b6;
