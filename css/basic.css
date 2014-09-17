@@ -3,7 +3,7 @@ font-size:1.2em;
 font-family: calibri;
 }
 #login{
-background-color:#FFF5E0 !important;
+background-color:#FFF5E0;
 }
 input{
 width:100%;
@@ -17,7 +17,7 @@ font-size:0.8em;
 font-family: calibri;	
 }
 .formItem{
-border-bottom: 1px solid #EFEAE3;
+border-bottom: 1px solid #d6c6b6;
 }
 .formItem i{
 font-size:2em;
@@ -25,9 +25,37 @@ font-size:2em;
 .formItem label{
 position: absolute;
 text-align: center;
+margin: 10px 0 0 10px;
+color: #5E3E20;
+}
+.formItemGroup label{
+margin: 10px 0 0 7px !important;
+}
+.ui-footer{
+background: none !important;
+border: none;
+color: #f0daac !important;
+text-shadow: 1px 1px 0 #FFFFFF !important;
+margin-bottom: 30px;
 }
 .ui-input-text{
-margin-left: 30px;
+margin: 30px 0 0 55px;
+background: transparent !important;
+box-shadow: none;
+border: none;
+color: #7E6347 !important;
+}
+.ui-page-theme-a .ui-body-inherit{
+box-shadow: none;
+}
+.formItemSubmit .ui-btn{
+text-shadow: none;
+background: #5e3e20;
+border: none;
+color: #fff;
+border-radius: 0 !important;
+border-bottom: 3px solid #c3b495 !important;
+margin-top: 30px;
 }
 .tdEvent{
 vertical-align: top;
