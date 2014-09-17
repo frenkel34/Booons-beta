@@ -38,7 +38,7 @@ color: #f0daac !important;
 text-shadow: 1px 1px 0 #FFFFFF !important;
 margin-bottom: 30px;
 }
-.ui-input-text{
+#login .ui-input-text{
 margin: 30px 0 0 55px;
 background: transparent !important;
 box-shadow: none;
@@ -68,7 +68,7 @@ margin-top: 30px;
 }
 
 /* Navbar buttons */
-.ui-btn-right{
+#login .ui-btn-right{
 background: none !important;
 border: 0 !important;
 color: #333333 !important;
