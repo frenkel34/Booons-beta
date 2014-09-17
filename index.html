@@ -190,11 +190,14 @@
 			resetGroup();
 			console.log('get the event for the group from api');
 			getGroupDataFromApi();
-			setTimeout(function() {$.mobile.changePage("#group_eventlist", {transition : "flip"}); },200);
+			setTimeout(function() {$.mobile.changePage("#group_eventlist", {transition : "flip"}); },500);
+			console.log('just flipped 5');				
+			
     	});
     	$("#btnSelectProduct").click(function(){
 			console.log('clicked to join running round');
-			setTimeout(function() {$.mobile.changePage("#round_select", {transition : "flip"}); },200);
+			setTimeout(function() {$.mobile.changePage("#round_select", {transition : "flip"}); },500);
+			console.log('just flipped 6');
     	});
      
     	$(".liProduct").click(function(){
@@ -223,6 +226,7 @@
 				$(".hdrGroupName").text('#' + $("#dbgGroup").val());
 				console.log('flip page, after short delay');
 				setTimeout(function() {$.mobile.changePage("#group_userlist", {transition : "flip"}); },200);
+				console.log('just flipped 7');
 			}
 			else {	
 				alert('Booons is anoniem, maar niet zo anoniem he?!');
@@ -232,16 +236,20 @@
 		$(".btnStartRound").click(function(){
 			console.log('round start clicked');
 			$.mobile.changePage("#round_select", {transition : "flip"});
+			console.log('just flipped 8');
 	    });
 	    
 		$( "#group_userlist" ).on("swipeleft", function(){
 			console.log('left swipe to eventlist for group');
 			$.mobile.changePage("#group_eventlist", {transition : "flip"});
+			console.log('just flipped 9');				
+			
 		});	    
 
 		$( "#group_eventlist" ).on("swiperight", function(){
 			console.log('right swipe to eventlist for group');
 			$.mobile.changePage("#group_userlist", {transition : "flip"});
+			console.log('just flipped 10');
 		});	    
     </script>
 </html>

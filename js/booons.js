@@ -19,7 +19,7 @@ function resetGroup(){
 		console.log('gathering data from json');
 			$(function(){
 				var sResult 	= data.result;
-				console.log('result of setRoundProduct is '+ sResult);
+				console.log('result of resetGroup is '+ sResult);
 		});	    	
 	});
 
@@ -47,7 +47,7 @@ function setUserInGroup(){
 		console.log('gathering data from json');
 			$(function(){
 				var sResult 	= data.result;
-				console.log('result of setRoundProduct is '+ sResult);
+				console.log('result of setUserInGroup is '+ sResult);
 		});	    	
 	});
 }	
@@ -76,11 +76,12 @@ function setRoundProduct(sProductName){
 		console.log('gathering data from json');
 			$(function(){
 				var sResult 	= data.result;
-				console.log('result of setRoundProduct is '+ sResult);
+				console.log('result of setProductInRound is '+ sResult);
 				console.log('get the event for the group from api');
 				getGroupDataFromApi();
 				console.log('flip page, after short delay');
 				setTimeout(function() {$.mobile.changePage("#group_eventlist", {transition : "flip"}); },200);
+				console.log('just flipped 1');
 		});	    	
 	});
 }	
@@ -159,7 +160,7 @@ function getGroupDataFromApi(){
 									console.log('order data in html');
 									 $("#dbgSync").val(data.datetime);
 									 $.mobile.changePage('#order', {transition : "flip"});
-									console.log('flipped');
+									console.log('just flipped 2');
 									 	 				
 						 		}
 						 	} else {
@@ -184,8 +185,9 @@ function getGroupDataFromApi(){
 					
 				}				 	
 				 console.log('button and counter are setup');
-				});	    	
+				});	 
 		});
+console.log('Now get group info is done!');				
 }	
 
 function registerDevice() {
@@ -308,6 +310,7 @@ function onNotification(e) {
     			navigator.notification.alert(e.payload.message,  'Booons update1', 'Booons update2');
 				if (e.payload.page != ''){
 					$.mobile.changePage('#'+e.payload.page, {transition : "flip"});
+					console.log('just flipped 3');
 				}
 				$("#app-status-ul").append('<li>MESSAGE -> MSG: popup message delivered</li>');
 			};
