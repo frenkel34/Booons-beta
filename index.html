@@ -189,8 +189,11 @@
     <script>   
     	$(".btnCloseRound").click(function(){
 			console.log('clicked to close round');
-			alert('nog te maken: afsluiten!');
-			setTimeout(function() {$.mobile.changePage("#order", {transition : "flip"}); },200);
+			console.log('reset the rounds in the group');
+			resetGroup();
+			console.log('get the event for the group from api');
+			getGroupDataFromApi();
+			setTimeout(function() {$.mobile.changePage("#group_eventlist", {transition : "flip"}); },200);
     	});
     	$("#btnSelectProduct").click(function(){
 			console.log('clicked to join running round');

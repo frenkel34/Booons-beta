@@ -1,9 +1,34 @@
+function resetGroup(){
+	var sCurrentUser 	= $("#dbgUsername").val();
+	var sCurrentGroup 	= $("#dbgGroup").val();
+	var sCurrentToken	= $("#dbgToken").val();
+	var sMethode		= 'resetGroup';
+	var sAuthkey 		= 'IDDQD';
+	var sQueryString 	= 'authkey='+ sAuthkey + '&group='+ sCurrentGroup +'&username='+ sCurrentUser +'&token='+ sCurrentToken +'&method='+sMethode;
+	var sHashKey 		= "";
+	var sHashKey 		= CryptoJS.SHA1(sQueryString).toString();
+	  $.getJSON( "http://www.booons.nl/api/api.asp?jsoncallback=?", {
+	    authkey: sAuthkey,
+	    group: sCurrentGroup,
+	    username: sCurrentUser,
+	    token: sCurrentToken,
+	    method: sMethode,
+	    hashKey: sHashKey
+	  })
+	    .done(function( data ) {
+		console.log('gathering data from json');
+			$(function(){
+				var sResult 	= data.result;
+				console.log('result of setRoundProduct is '+ sResult);
+		});	    	
+	});
+
+}
+
 function setUserInGroup(){
 	var sCurrentUser 	= $("#dbgUsername").val();
 	var sCurrentGroup 	= $("#dbgGroup").val();
 	var sCurrentToken	= $("#dbgToken").val();
-//	alert('token in function: '+ sCurrentToken );
-//	alert('token in function 2: '+ $("#dbgToken").val());
 	var sMethode		= 'loginuser';
 	var sAuthkey 		= 'IDKFA';
 	var sQueryString 	= 'authkey='+ sAuthkey + '&group='+ sCurrentGroup +'&username='+ sCurrentUser +'&token='+ sCurrentToken +'&method='+sMethode;
