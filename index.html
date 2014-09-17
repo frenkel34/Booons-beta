@@ -23,17 +23,29 @@
         <script type="text/javascript" charset="utf-8" src="js/interaction.js"></script>
         <script type="text/javascript" src="js/PushNotification.js"></script>
 		<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha1.js"></script>
+		
+		<!-- fontawesome link -->
+		<link rel="stylesheet" href="ext/fontawesome/css/font-awesome.min.css">
 
 <!-- Start of first index page-->
-		 <div data-role="page" id="login">
+		 <div data-role="page" id="login"> 
 			<div data-role="header">
 				<h1>booons</h1>
 				<a href="#debug" class="ui-btn-left" data-transition="flip" data-direction="reverse" data-icon="grid">debug</a>
 			</div>
 			<div data-role="content">
-				<input type="text" placeholder="@Naam" id="txtUsername" value="" /> 
-				<input type="text" placeholder="#Groep" id="txtGroup" value=""/> 
-				<input type="button" value="Doe mee!" id="btnSubmitLogin" /> 
+				<img id="logo" src="img/logo.png"/>
+				<div class="formItem">
+					<label for="text-basic"><i class="fa fa-user"></i></label>
+					<input type="text" placeholder="@Naam" id="txtUsername" value="" />
+				</div> 
+				<div class="formItem">
+					<label for="text-basic"><i class="fa fa-coffee"></i></label>
+					<input type="text" placeholder="#Groep" id="txtGroup" value=""/> 
+				</div> 
+				<div class="formItem">
+					<input type="button" value="Doe mee!" id="btnSubmitLogin" /> 
+				</div> 
 			</div>
 			<div data-role="footer" data-position="fixed">
 				<h4>&copy; 2014 Booons.nl by SEOns</h4>
@@ -55,7 +67,7 @@
 				</div>
 				<div class="divRoundCounter">
 					ronde sluit over<br />
-					<span class="countDown"></span> 
+					<span class="countDown"></span>
 				</div>
 				<div class="divRoundButton">
 					<input type="button" value="Start ronde" class="btnStartRound" />				
@@ -90,6 +102,8 @@
 					<input type="button" value="Start ronde" class="btnStartRound" />				
 				</div>				
 				<div id="lstEventlist">
+						<ul id="eventList-ul">
+						</ul>
 				</div>
 			</div>
 			<div data-role="footer" data-position="fixed">
@@ -141,6 +155,7 @@
 			</div>
 		</div>
 <!-- /page -->
+
 
 <!-- Start of debug page-->
 		 <div data-role="page" id="debug"> 
