@@ -41,7 +41,7 @@
 					<input type="text" placeholder="#Groep" id="txtGroup" value=""/> 
 				</div> 
 				<div class="formItemSubmit">
-					<input type="button" value="Doe mee!" id="btnSubmitLogin" /> 
+					<input type="button" value="Spelen!" id="btnSubmitLogin" /> 
 				</div> 
 			</div>
 			<div data-role="footer">
@@ -191,13 +191,13 @@
 			resetGroup();
 			console.log('get the event for the group from api');
 			getGroupDataFromApi();
-			setTimeout(function() {$.mobile.changePage("#group_eventlist", {transition : "flip"}); },500);
+			setTimeout(function() {$.mobile.changePage("#group_eventlist", {transition : "slide"}); },500);
 			console.log('just flipped 5');				
 			
     	});
     	$("#btnSelectProduct").click(function(){
 			console.log('clicked to join running round');
-			setTimeout(function() {$.mobile.changePage("#round_select", {transition : "flip"}); },500);
+			setTimeout(function() {$.mobile.changePage("#round_select", {transition : "slide"}); },500);
 			console.log('just flipped 6');
     	});
      
@@ -226,7 +226,7 @@
 				console.log('set groupnames');
 				$(".hdrGroupName").text('#' + $("#dbgGroup").val());
 				console.log('flip page, after short delay');
-				setTimeout(function() {$.mobile.changePage("#group_userlist", {transition : "flip"}); },200);
+				setTimeout(function() {$.mobile.changePage("#group_userlist", {transition : "slide"}); },200);
 				console.log('just flipped 7');
 			}
 			else {	
@@ -236,20 +236,20 @@
 	    
 		$(".btnStartRound").click(function(){
 			console.log('round start clicked');
-			$.mobile.changePage("#round_select", {transition : "flip"});
+			$.mobile.changePage("#round_select", {transition : "slide"});
 			console.log('just flipped 8');
 	    });
 	    
 		$( "#group_userlist" ).on("swipeleft", function(){
 			console.log('left swipe to eventlist for group');
-			$.mobile.changePage("#group_eventlist", {transition : "flip"});
+			$.mobile.changePage("#group_eventlist", {transition : "slide"});
 			console.log('just flipped 9');				
 			
 		});	    
 
 		$( "#group_eventlist" ).on("swiperight", function(){
 			console.log('right swipe to eventlist for group');
-			$.mobile.changePage("#group_userlist", {transition : "flip"});
+			$.mobile.changePage("#group_userlist", {transition : "slide"});
 			console.log('just flipped 10');
 		});	    
     </script>

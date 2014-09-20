@@ -80,7 +80,7 @@ function setRoundProduct(sProductName){
 				console.log('get the event for the group from api');
 				getGroupDataFromApi();
 				console.log('flip page, after short delay');
-				setTimeout(function() {$.mobile.changePage("#group_eventlist", {transition : "flip"}); },200);
+				setTimeout(function() {$.mobile.changePage("#group_eventlist", {transition : "slide"}); },200);
 				console.log('just flipped 1');
 		});	    	
 	});
@@ -159,7 +159,7 @@ function getGroupDataFromApi(){
 									 $("#lstRoundlist").html(sOutputOrder);
 									console.log('order data in html');
 									 $("#dbgSync").val(data.datetime);
-									 $.mobile.changePage('#order', {transition : "flip"});
+									 $.mobile.changePage('#order', {transition : "slide"});
 									console.log('just flipped 2');
 									 	 				
 						 		}
@@ -309,7 +309,7 @@ function onNotification(e) {
 				$("#app-status-ul").append('<li>MESSAGE -> MSG: popup message</li>');
     			navigator.notification.alert(e.payload.message,  'Booons update1', 'Booons update2');
 				if (e.payload.page != ''){
-					$.mobile.changePage('#'+e.payload.page, {transition : "flip"});
+					$.mobile.changePage('#'+e.payload.page, {transition : "slide"});
 					console.log('just flipped 3');
 				}
 				$("#app-status-ul").append('<li>MESSAGE -> MSG: popup message delivered</li>');
