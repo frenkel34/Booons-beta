@@ -303,7 +303,9 @@ function onNotification(e) {
 			if (e.collapse_key == "event") {
 				$("#app-status-ul").append('<li>MESSAGE -> MSG: getting the events</li>');
 				getGroupDataFromApi();
-				$("#app-status-ul").append('<li>MESSAGE -> MSG: got events succesfully</li>');							
+				$("#app-status-ul").append('<li>MESSAGE -> MSG: got events succesfully</li>');	
+				$("#app-status-ul").append('<li>MESSAGE -> APP: Show group event page!</li>');	
+	//			$.mobile.changePage("#group_eventlist", {transition : "slide"})
 			}
 			else {
 				$("#app-status-ul").append('<li>MESSAGE -> MSG: popup message</li>');

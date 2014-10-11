@@ -34,14 +34,14 @@
 				<img id="logo" src="img/logo.png"/>
 				<div class="formItem">
 					<label for="text-basic"><i class="fa fa-user"></i></label>
-					<input type="text" placeholder="@Naam" id="txtUsername" value="" />
+					<input type="text" placeholder="@Naam" id="txtUsername" value="default" />
 				</div> 
 				<div class="formItem formItemGroup">
 					<label for="text-basic"><i class="fa fa-coffee"></i></label>
-					<input type="text" placeholder="#Groep" id="txtGroup" value=""/> 
+					<input type="text" placeholder="#Groep" id="txtGroup" value="abc"/> 
 				</div> 
 				<div class="formItemSubmit">
-					<input type="button" value="Spelen!" id="btnSubmitLogin" /> 
+					<input type="button" value="Speel!" id="btnSubmitLogin" /> 
 				</div> 
 			</div>
 			<div data-role="footer">
@@ -66,6 +66,7 @@
 				<div class="divRoundCounter">
 					ronde sluit over<br />
 					<span class="countDown"></span>
+					<input type="button" value="Bestel" id="btnSelectProduct">
 				</div>
 				<div class="divRoundButton">
 					<input type="button" value="Start ronde" class="btnStartRound" />				
@@ -184,7 +185,9 @@
 		</div>
 <!-- /page -->
     </body>
-    <script>   
+    <script>
+	
+	
     	$(".btnCloseRound").click(function(){
 			console.log('clicked to close round');
 			console.log('reset the rounds in the group');
