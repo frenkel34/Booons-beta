@@ -71,6 +71,9 @@
 				<div class="divRoundButton">
 					<input type="button" value="Start ronde" class="btnStartRound" />				
 				</div>				
+				<div class="divRefreshButton">
+					<input type="button" value="Refresh" class="btnRefresh" />				
+				</div>				
 				<div id="lstUserlist">
 				</div>
 			</div>
@@ -99,6 +102,9 @@
 				</div>
 				<div class="divRoundButton">
 					<input type="button" value="Start ronde" class="btnStartRound" />				
+				</div>				
+				<div class="divRefreshButton">
+					<input type="button" value="Refresh" class="btnRefresh" />				
 				</div>				
 				<div id="lstEventlist">
 						<ul id="eventList-ul">
@@ -178,6 +184,7 @@
 				Token:<br />
 				<input type="text" placeholder="" id="dbgToken" value="" /> 
 				Roundstatus:<br />
+				This is the hydrated version!
 			</div>
 			<div data-role="footer" data-position="fixed">
 				<h4>&copy; 2014 Booons.nl by SEOns</h4>
@@ -186,7 +193,10 @@
 <!-- /page -->
     </body>
     <script>
-	
+    	$(".btnRefresh").click(function(){
+			console.log('clicked to refresh the events');
+			getGroupDataFromApi();
+    	});
 	
     	$(".btnCloseRound").click(function(){
 			console.log('clicked to close round');
@@ -196,7 +206,6 @@
 			getGroupDataFromApi();
 			setTimeout(function() {$.mobile.changePage("#group_eventlist", {transition : "slide"}); },500);
 			console.log('just flipped 5');				
-			
     	});
     	$("#btnSelectProduct").click(function(){
 			console.log('clicked to join running round');

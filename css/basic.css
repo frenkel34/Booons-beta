@@ -1,12 +1,16 @@
 .eventMessage{
 margin-right:60px;
+float:right;
 }
+
+.eventTime{
+float:left;
+}
+
 .eventMessage, .eventTime{
 font-size:0.8em;
 font-family: 'Comfortaa', cursive, calibri;
-float:left;
 padding-left:5px;
-
 }
 
 body {

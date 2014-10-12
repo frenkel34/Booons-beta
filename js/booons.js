@@ -95,7 +95,11 @@ function getGroupDataFromApi(){
 	var sQueryString 	= 'authkey='+ sAuthkey + '&group='+ sCurrentGroup +'&username='+ sCurrentUser +'&token='+ sCurrentToken +'&method='+sMethode;
 	var sHashKey 		= "";
 	var sHashKey 		= CryptoJS.SHA1(sQueryString).toString();
-	  
+	if(sCurrentGroup == '' || sCurrentUser == ''){
+		alert('Zelfs Booons heeft wel een een ochtendhumeur, log even opnieuw in!');
+		setTimeout(function() {$.mobile.changePage("#login", {transition : "slide"}); },500);
+	};
+	
 	  $.getJSON( "http://www.booons.nl/api/api.asp?jsoncallback=?", {
 	    authkey: sAuthkey,
 	    group: sCurrentGroup,
@@ -107,6 +111,8 @@ function getGroupDataFromApi(){
 	    .done(function( data ) {
 		console.log('gathering data from json');
 			$(function(){
+				var sOutputUsers = '';
+				$("#lstUserlist").html('');
 				var sOutputUsers 	= '<table><tr><td width="30%"></td><td></td></tr>';
 				$.each(data.users, function(index, value){
 					 sOutputUsers += '<tr><td class="tdEvent">' + value.active + '</td><td class="tdEvent">' + value.username + '</td></tr>';
