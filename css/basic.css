@@ -1,3 +1,6 @@
+li{
+ list-style-type: none;
+}
 .eventMessage{
 margin-right:60px;
 float:right;
@@ -86,6 +89,12 @@ border-bottom: 3px solid #c3b495 !important;
 margin-top: 30px;
 }
 
+/* header */
+.ui-header{
+background: none repeat scroll 0 0 #5e3e20 !important;
+border-bottom: 3px solid #c3b495 !important;
+border-top: none;
+}
 /* Navbar buttons */
 #login .ui-btn-right{
 background: none !important;
@@ -93,6 +102,11 @@ border: 0 !important;
 color: #333333 !important;
 box-shadow: none !important;
 font-size:1.2em !important;
+}
+
+/* Content */
+.ui-content {
+padding: 0;
 }
 
 .tdEvent{
@@ -132,6 +146,19 @@ span.countDown{
 }
 
 .liProduct{
-	height: 40px;
+height: 100px;
+}
+
+.liProduct:nth-child(1){
+background: url(img/coffee.jpg)
+}
+
+/* History list */
+.tdEvent{
+width: 0; 
+height: 0; 
+border-top: 10px solid transparent;
+border-bottom: 10px solid transparent; 
+border-right:10px solid blue; 
 }
 
