@@ -43,6 +43,29 @@
 				<div class="formItemSubmit">
 					<input type="button" value="Speel!" id="btnSubmitLogin" /> 
 				</div> 
+				<div class="formItemSubmit">
+					<input type="button" value="Cam!" id="btnGotoCam" /> 
+				</div> 
+			</div>
+			<div data-role="footer">
+				<h4>&copy; 2014 Booons.nl by SEOns</h4>
+				<a href="#debug" class="ui-btn-right" data-transition="flip" data-direction="reverse"><i class="fa fa-bug"></i></a>
+			</div>
+		</div>
+		<!-- Start of camara page-->
+		 <div data-role="page" id="takePhoto"> 
+			<div data-role="content">
+				<img id="logo" src="img/logo.png"/>
+				<div class="formItemSubmit">
+					<input type="button" value="Maak foto!" id="btnTakePhoto" /> 
+				</div> 
+				<div class="formItemSubmit">
+					<input type="button" value="Selecteer foto!" id="btnSelectPhoto" /> 
+				</div> 
+				<div class="formItemSubmit">
+					<input type="button" value="Upload naar booons!" id="btnSubmitPhoto" /> 
+				</div> 
+				<img src="" id="myImage" />
 			</div>
 			<div data-role="footer">
 				<h4>&copy; 2014 Booons.nl by SEOns</h4>
@@ -193,10 +216,33 @@
 <!-- /page -->
     </body>
     <script>
+	
+	
+	
+		$("#btnGotoCam").click(function(){
+			console.log('clicked to go to photo page');
+			setTimeout(function() {$.mobile.changePage("#takePhoto", {transition : "slide"}); },500);
+			console.log('just flipped 9');	
+		});
+		$("#btnTakePhoto").click(function(){
+			console.log('clicked to take a selfy');
+			alert('start camara');
+			getPicture();
+			alert('getPicture is voltooid');
+		});
+		$("#btnSelectPhoto").click(function(){
+			console.log('clicked to select a pic');
+			alert('start album');
+		});
+		$("#btnSubmitPhoto").click(function(){
+			console.log('clicked to submit the pic');
+			alert('uploaden die handel');
+		});
+	
+	
     	$(".btnRefresh").click(function(){
 			console.log('clicked to refresh the events');
 			getGroupDataFromApi();
-			getLanguage();
     	});
 	
     	$(".btnCloseRound").click(function(){

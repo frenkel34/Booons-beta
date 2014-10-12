@@ -367,9 +367,16 @@ function countdown_timer(){
   }
 }
 
-function getLanguage(){
-	navigator.globalization.getPreferredLanguage(
-    function (language) {alert('language: ' + language.value + '\n');},
-    function () {alert('Error getting language\n');}
-);
+function getPicture(){
+	$("#app-status-ul").append('<li>cam: start function</li>');
+	navigator.camera.getPicture(onSuccess, onFail, { quality: 50 }); 
+	function onSuccess(imageData) {
+		$("#app-status-ul").append('<li>cam: succes</li>');
+		var image = document.getElementById('myImage');
+		image.src = "data:image/jpeg;base64," + imageData;
+	}
+	function onFail(message) {
+		$("#app-status-ul").append('<li>cam: failure on "'+ message +'"</li>');
+		alert('Failed because: ' + message);
+	}
 }
