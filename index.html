@@ -30,7 +30,7 @@
 
 		<!-- Start of first index page-->
 		 <div data-role="page" id="login"> 
-			<div data-role="content">
+			<div data-role="content" id="contentHome">
 				<img id="logo" src="img/logo.png"/>
 				<div class="formItem">
 					<label for="text-basic"><i class="fa fa-user"></i></label>
@@ -147,12 +147,12 @@
 				<a href="#debug" class="ui-btn-left" data-transition="flip" data-direction="reverse" data-icon="grid">debug</a>
 				<a href="#login" class="ui-btn-right" data-transition="flip" data-direction="reverse" data-icon="grid">leave</a>
 			</div>
-			<div data-role="content">
+			<div data-role="content cttProductlist">
 				<div id="lstProductlist">
-					<li class="liProduct">Koffie</li>
-					<li class="liProduct">Water</li>
-					<li class="liProduct">Thee</li>
-					<li class="liProduct">Melk</li>
+					<li class="liProduct coffeeProd"><span>Koffie</span></li>
+					<li class="liProduct waterProd"><span>Water</span></li>
+					<li class="liProduct teaProd"><span>Thee</span></li>
+					<li class="liProduct milkProd"><span>Melk</span></li>
 				</div>
 			</div>
 			<div data-role="footer" data-position="fixed">
